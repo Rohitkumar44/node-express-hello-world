@@ -1,0 +1,25 @@
+piVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nd
+  name: nd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nd
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nd
+    spec:
+      containers:
+      - image: rohit44docker/nodeim:v1.0
+        name: nodeim
+        resources: {}
+status: {}
+
